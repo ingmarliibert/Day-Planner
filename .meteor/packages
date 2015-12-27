@@ -20,3 +20,4 @@ twbs:bootstrap
 fezvrasta:bootstrap-material-design
 kadira:flow-router
 arillo:flow-router-helpers
+aldeed:simple-schema
