@@ -1,0 +1,36 @@
+.calendar {
+    left: 4%;
+}
+
+.btn-calendar {
+    color: #009688 !important;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.responsive-calendar {
+    background-color: white;
+    margin-top: 25px;
+    padding-top: 25px;
+    box-shadow: 1px 1px 5px -1px;
+}
+
+.responsive-calendar .day .active a {
+    background-color: #009688
+}
+
+.responsive-calendar .day .active a:hover {
+    background-color: #008072;
+}
+
+.year-month {
+    top: -15px;
+    margin-bottom: -15px;
+}
+
+.hr-line {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+

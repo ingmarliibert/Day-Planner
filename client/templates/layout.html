@@ -1,4 +1,10 @@
 <template name="layout">
-    {{> Template.dynamic template=header }}
-    {{> Template.dynamic template=body }}
+    {{> Template.dynamic template=sidebar }}
+    <!--This is needed for the sidebar to push the content away-->
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            {{> Template.dynamic template=header }}
+            {{> Template.dynamic template=body }}
+        </div>
+    </div>
 </template>

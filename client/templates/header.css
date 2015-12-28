@@ -1,0 +1,23 @@
+#header {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    margin-left: -36px;
+    margin-right: -36px;
+    margin-top: -20px;
+    box-shadow: 0 0 2px 1px;
+}
+
+.btn-header {
+    border: 1px solid #00254d;
+    color: #00254d !important;
+    font-weight: bold !important;
+}
+
+.title-header {
+    color: #00254d;
+}
+
+@media (max-width: 767px) {
+    .title-header { font-size: 15px !important; font-weight: bold !important;}
+}

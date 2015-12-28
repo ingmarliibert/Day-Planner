@@ -1,0 +1,11 @@
+<template name="step">
+    <div id={{_id}} class="checkbox">
+        <label>
+            <input type="checkbox">
+            {{#if done}}
+                {{ click }}
+            {{/if}}
+        </label>
+        {{ name }}
+    </div>
+</template>

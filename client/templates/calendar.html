@@ -1,0 +1,36 @@
+<template name="calendar">
+    <div class="row" style="">
+        <div class="col-xs-11 calendar">
+            <div class="responsive-calendar">
+                <div class="row main">
+                    <div class="controls col-md-12">
+                        <h4 class="col-xs-12 year-month">
+                            <span class="text-uppercase" data-head-year="">
+                            </span>
+                            <span class="text-uppercase" data-head-month="">
+                            </span>
+                        </h4>
+                        <a class="pull-left" data-go="prev">
+                            <div class="btn btn-default btn-flat btn-calendar">Prev</div>
+                        </a>
+                        <a class="pull-right" data-go="next">
+                            <div class="btn btn-default btn-flat btn-calendar">Next</div>
+                        </a>
+                    </div>
+                    <div class="day-headers col-xs-12">
+                        <hr class="hr-line">
+                        <div class="day header">Mon</div>
+                        <div class="day header">Tue</div>
+                        <div class="day header">Wed</div>
+                        <div class="day header">Thu</div>
+                        <div class="day header">Fri</div>
+                        <div class="day header">Sat</div>
+                        <div class="day header">Sun</div>
+                    </div>
+                </div>
+                <div class="days" data-group="days">
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
