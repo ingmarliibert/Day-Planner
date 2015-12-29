@@ -1,22 +1,20 @@
 <template name="sidebar">
-    <div id="wrapper" class="">
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a class="title">
-                        DAY PLANNER
-                    </a>
-                </li>
-                {{#if not_equal currentRouteName 'calendar'}}
-                    <li>
-                        <a href={{pathFor 'calendar'}}>Dashboard</a>
-                    </li>
-                {{/if}}
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <a class="title">
+                    DAY PLANNER
+                </a>
+            </li>
+            {{#if not_equal currentRouteName 'calendar'}}
                 <li>
-                    <a href="">Logged in as //username//</a>
+                    <a href={{pathFor 'calendar'}}>Calendar</a>
                 </li>
-            </ul>
-        </div>
+            {{/if}}
+            <li>
+                <a href="">Logged in as //username//</a>
+            </li>
+        </ul>
     </div>
 </template>

@@ -1,3 +1,44 @@
 .btn-event {
     background-color: white !important;
+    color: #00254d !important;
+}
+
+.middle {
+    background-color: white;
+    box-shadow: 1px 1px 5px -1px;
+    left: 15px;
+}
+
+.title-label {
+    color: #00254d !important;
+}
+
+.special {
+    padding-left: 15px;
+    margin-left: -3px;
+}
+
+.title-input {
+}
+
+.form-div {
+    margin-top: 15px;
+}
+
+.btn-more-steps {
+    padding: 0;
+    display: flex;
+    margin-left: 15px;
+}
+
+.step-input {
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .special { margin-left: 0;}
+}
+
+@media (max-width: 1200px) {
+    .special { margin-left: -2px}
 }

@@ -1,9 +1,9 @@
 <template name="step">
-    <div id={{_id}} class="checkbox">
+    <div id={{id}} class="checkbox form-control">
         <label>
             <input type="checkbox">
             {{#if done}}
-                {{ click }}
+                {{ click id }}
             {{/if}}
         </label>
         {{ name }}

@@ -3,6 +3,13 @@
  */
 Template.sidebar.helpers({
     not_equal: (one, two) => {
-        return one == two
+        return one != two
+    }
+});
+
+Template.sidebar.events({
+    'click a': (e) => {
+        if($(window).width() <= 768)
+            $("#wrapper").toggleClass("toggled");
     }
 });
