@@ -1,38 +1,67 @@
 <template name="events">
     <div class="events">
-        {{#each events}}
-            {{>event}}
-        {{/each}}
+        {{#if Template.subscriptionsReady }}
+            {{#each events}}
+                {{>event}}
+            {{/each}}
+        {{else}}
+            <p>Loading...</p>
+        {{/if}}
     </div>
-    <div>
-        <div class="top">
-            <button class="btn btn-raised btn-event trigger"><strong>Add a new event</strong></button>
-        </div>
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="middle">
-                    <div class="row">
-                        <div class="col-xs-10 col-xs-offset-1">
-                            <form class="form-horizontal">
-                                <div class="form-group row sizing label-placeholder form-div">
-                                    <label class="control-label col-sm-1 title-label special" for="1">TITLE</label>
-                                    <div class="col-sm-11">
-                                        <input class="form-control title-input" id="1" type="text">
+    <div class="row event-form-top">
+        <div class="col-xs-11">
+            <div class="top">
+                <button class="btn btn-raised btn-event trigger"><strong>Add a new event</strong></button>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="middle">
+                        <div class="row">
+                            <div class="col-xs-10 col-xs-offset-1">
+                                <form class="form-horizontal add-new-form">
+                                    <div class="form-group row sizing label-placeholder form-div">
+                                        <label class="control-label col-sm-1 title-label special" for="1">TITLE</label>
+                                        <div class="col-xs-11 event-div">
+                                            <input class="form-control title-input" id="1" type="text">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group row sizing label-placeholder form-div">
-                                    <label class="control-label sizing col-sm-1 title-label" for="2">STEPS</label>
-                                    <div class="col-sm-12">
-                                        <input class="form-control step-input" id="2" type="text">
+                                    <div class="form-group row sizing label-placeholder form-div">
+                                        <label class="control-label sizing col-sm-1 title-label" for="2">STEPS</label>
+                                        <div class="col-xs-11 event-div">
+                                            <input class="form-control step-input" id="2" type="text">
+                                        </div>
+                                        <div class="col-xs-11 event-div ">
+                                            <input class="form-control step-input" id="3" type="text">
+                                        </div>
+                                        <div class="col-xs-11 event-div">
+                                            <input class="form-control step-input" id="4" type="text">
+                                        </div>
+                                        <button class="btn btn-flat btn-more-steps pull-left"><i class="material-icons">add</i></button>
+                                        <div class="time-div row">
+                                            <div class="col-xs-12">
+                                                <label class="control-label sizing col-sm-1 col-xs-12 title-label" for="start">START</label>
+                                                <div class="col-md-2 col-sm-5 col-xs-7">
+                                                    <input class="form-control step-input" id="start" placeholder="HH:MM" type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="time-div row">
+                                            <div class="col-xs-12">
+                                                <label class="control-label sizing col-sm-1 col-xs-12 title-label" for="end">END</label>
+                                                <div class="col-md-2 col-sm-5 col-xs-7">
+                                                    <input class="form-control step-input" id="end" placeholder="HH:MM" type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-flat btn-add-new col-xs-12 col-sm-1">Add</button>
                                     </div>
-                                    <button class="btn btn-flat btn-more-steps"><i class="material-icons">add</i></button>
-                                </div>
-                            </form>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="bottom"></div>
         </div>
-        <div class="bottom"></div>
     </div>
 </template>

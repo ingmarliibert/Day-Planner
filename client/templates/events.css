@@ -28,17 +28,45 @@
 .btn-more-steps {
     padding: 0;
     display: flex;
-    margin-left: 15px;
+    left: 2.7%;
 }
 
 .step-input {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
+    float: right;
+}
+
+.time-div .title-label {
+    float: left;
+}
+
+.event-div {
+    float: right;
+}
+
+.btn-add-new {
+    color: #00254d !important;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-weight: bold !important;
 }
 
 @media (max-width: 768px) {
+    .event-div { float:left;}
     .special { margin-left: 0;}
+    .top .btn-event { margin-left: -1px;}
+    .event-form-top .col-xs-11 { margin-left: -1px;}
+}
+
+@media (min-width: 768px) {
+    .event-form-top .col-xs-11 { left: 2.59%;}
+}
+
+@media (min-width: 1000px) {
+    .event-form-top .col-xs-11 { left: 2.8%;}
 }
 
 @media (max-width: 1200px) {
-    .special { margin-left: -2px}
+    .special { margin-left: -2px;}
 }

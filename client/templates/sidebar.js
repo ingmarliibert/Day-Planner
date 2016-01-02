@@ -4,6 +4,10 @@
 Template.sidebar.helpers({
     not_equal: (one, two) => {
         return one != two
+    },
+    username: () => {
+        //@todo: fix this
+        return Meteor.user().username
     }
 });
 

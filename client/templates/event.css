@@ -1,14 +1,19 @@
 .event {
     box-shadow: 1px 1px 5px -1px;
     background-color: white;
-    left:4%; margin-top: 25px;
+    left:4%;
+    margin-top: 25px;
     padding-top: 15px;
 }
 
-.title {
+.event-title {
     display: inline-block; margin-left:20px;
 }
 
 .line {
     margin-top: 8px; margin-bottom: 8px
+}
+
+.check {
+    margin-right: 5px;
 }

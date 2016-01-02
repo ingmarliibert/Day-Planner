@@ -17,16 +17,17 @@
 .title-header {
     color: #00254d;
     display: flex;
-    width: 50%;
+    width: 75%;
     margin: 0 auto;
 }
 
 .title-span {
     display: flex;
-    width: 50%
+    width: 100%;
 }
 
 @media (max-width: 768px) {
-    .title-header { font-size: 15px !important; font-weight: bold !important}
+    .title-header { font-size: 15px !important; font-weight: bold !important; width: 100%; margin-left: -13px;}
+    .title-span { width: 50%;}
 }
 
