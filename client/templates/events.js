@@ -18,7 +18,7 @@ Template.events.helpers({
     events: () => {
         var date = moment(FlowRouter.getParam('year')+"-"+FlowRouter.getParam('month')+"-"+FlowRouter.getParam('day'));
         date_init(0, 0, 0, date);
-        var events = Events.find({},{$sort: {start: 1}}) || {};
+        var events = Events.find({},{$sort: {start: 1}}) || [];
         return events
     }
 });
@@ -82,18 +82,22 @@ Template.events.events({
 });
 
 Template.events.onCreated(function() {
-    var self = this;
-    self.autorun(() => {
-        var date = moment(FlowRouter.getParam('year')+"-"+FlowRouter.getParam('month')+"-"+FlowRouter.getParam('day'));
-        date_init(0, 0, 0, date);
-        self.subscribe('events', date.toDate());
-    })
+    (function subscribe(self) {
+        self.autorun(() => {
+            var date = moment(FlowRouter.getParam('year') + "-" + FlowRouter.getParam('month') + "-" + FlowRouter.getParam('day'));
+            date_init(0, 0, 0, date);
+            self.subscribe('events', date.toDate());
+        })
+    })(this)
 });
 
 Template.events.onRendered(() => {
-    var middle = $('.middle');
-    //For right collapsible form height
-    Session.set('form-height', $(".add-new-form").css('height'));
-    middle.css('height', '0');
-    middle.css('display', 'none')
+    (function form_animate() {
+        var middle = $('.middle');
+        //For right collapsible form height
+        Session.set('form-height', $(".add-new-form").css('height'));
+        middle.css('height', '0');
+        middle.css('display', 'none')
+    })()
+
 });

@@ -15,7 +15,7 @@
 
 .special {
     padding-left: 15px;
-    margin-left: -3px;
+    margin-left: 0;
 }
 
 .title-input {
@@ -50,23 +50,34 @@
     align-content: center;
     justify-content: center;
     font-weight: bold !important;
+    padding-left: 17px;
 }
+
+/*
+.loading {
+    width: 400px;
+}
+*/
 
 @media (max-width: 768px) {
     .event-div { float:left;}
     .special { margin-left: 0;}
-    .top .btn-event { margin-left: -1px;}
+    .top .btn-event { margin-left: 0;}
     .event-form-top .col-xs-11 { margin-left: -1px;}
+    .btn-add-new { padding-left: 30px}
+    .trigger {}
 }
+
 
 @media (min-width: 768px) {
-    .event-form-top .col-xs-11 { left: 2.59%;}
-}
 
+}
+/*
 @media (min-width: 1000px) {
     .event-form-top .col-xs-11 { left: 2.8%;}
 }
-
+*/
 @media (max-width: 1200px) {
     .special { margin-left: -2px;}
 }
+

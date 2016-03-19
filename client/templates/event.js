@@ -2,8 +2,10 @@
  * Created by Liibert on 28.12.2015.
  */
 Template.event.events({
-   'click .check': (e) => {
-       Meteor.call("check_task", !this.done)
+   'click .check': function(e) {
+       var id = iter($(e.target), $().parent, 5).data('id');
+       var step_id = this.id;
+       Meteor.call("toggle_step", {id:id, step_id:step_id});
    }
 });
 

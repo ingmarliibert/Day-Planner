@@ -1,14 +1,14 @@
 <template name="event">
-    <div class="row">
-        <div data-id="{{_id}}" class="event col-xs-11" style="{{#unless steps}}padding-bottom: 5px;{{/unless}}">
-            <strong>{{ hours start }} - {{ hours end }}</strong>
-            <p class="event-title">{{ title }}</p>
-            {{#if steps}}
-                <hr class="line">
-            {{/if}}
-            {{#each steps}}
-                {{> step}}
-            {{/each}}
+        <div data-id="{{_id}}" class="event" style="{{#unless steps}}padding-bottom: 5px;{{/unless}}">
+            <div class="event-info">
+                <strong>{{ hours start }} - {{ hours end }}</strong>
+                <p class="event-title">{{ title }}</p>
+                {{#if steps}}
+                    <hr class="line">
+                {{/if}}
+                {{#each steps}}
+                    {{> step}}
+                {{/each}}
+            </div>
         </div>
-    </div>
 </template>
