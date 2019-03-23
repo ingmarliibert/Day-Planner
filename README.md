@@ -1,2 +1,2 @@
 # Day-Planner
-Web app for planning you day
+Web app for planning your day
